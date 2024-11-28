@@ -1,9 +1,35 @@
-# Challenge: Investigate the 90% Accuracy Limit
-## Report Your Findings:
-Summarize your observations about why the model is limited to 90% accuracy.
-Include screenshots or plots (e.g., loss curves, accuracy comparisons, or visualized data) to support your conclusions.
-## Experiment Results:
-Share the changes you made (if any) to improve accuracy.
-Provide before-and-after accuracy metrics and explain why your adjustments worked (or didn’t work).
-## Propose Solutions:
-Improvement of the current implementation that could help achieve higher accuracy.
+# Desafío: investigar el límite de precisión del 90%
+## Informe sus hallazgos:
+Resuma sus observaciones sobre por qué el modelo está limitado a una precisión del 90%.
+
+Para describir posibles razones por las que es modelo está limitado en su precisión es necesario tener en cuenta su configuración, la cual iniciamos. La red convolucional cuenta con tres capas construidas de la siguiente manera:
+```
+// First convolution layer
+model.add(tf.layers.conv2d({
+  inputShape: [28, 28, 1],
+  filters: 6,
+  kernelSize: 5,
+  activation: 'tanh',
+  padding: 'same'
+}));
+model.add(tf.layers.averagePooling2d({ poolSize: 2, strides: 2 }));
+
+// Second convolution layer
+model.add(tf.layers.conv2d({
+  filters: 16,
+  kernelSize: 5,
+  activation: 'tanh'
+}));
+model.add(tf.layers.averagePooling2d({ poolSize: 2, strides: 2 }));
+
+// Flatten layer
+model.add(tf.layers.flatten());
+```
+Incluya capturas de pantalla o gráficos (por ejemplo, curvas de pérdida, comparaciones de precisión o datos visualizados) para respaldar sus conclusiones.
+
+
+## Resultados del experimento:
+Comparta los cambios que realizó (si los hubo) para mejorar la precisión.
+Proporcione métricas de precisión del antes y el después y explique por qué sus ajustes funcionaron (o no funcionaron).
+## Proponer soluciones:
+Mejora de la implementación actual que podría ayudar a lograr una mayor precisión.
