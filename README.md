@@ -3,6 +3,6 @@ En el siguiente repositorio se presenta diferentes ejercicios desarrollados en c
 - Clase 1
 - Clase 2
 - Clase 3
- - Parte A
- - Parte B
+  - Parte A
+  - Parte B
 - Clase 4  
