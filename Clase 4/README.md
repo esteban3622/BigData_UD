@@ -68,6 +68,7 @@ await model.fit(data.trainX, data.trainY, {
 Comparta los cambios que realizó (si los hubo) para mejorar la precisión.
 Proporcione métricas de precisión del antes y el después y explique por qué sus ajustes funcionaron (o no funcionaron).
 
+Durante el proceso se llevaron a cabo diferenes experimentos para mejorar la precisión, sin embargo, se comparte el último código llevado a cabo. El cual recibio el nombre de `mnist_change.html` ubicado en la carpeta de la Clase 4.
 
 ## Proponer soluciones:
 Mejora de la implementación actual que podría ayudar a lograr una mayor precisión.
