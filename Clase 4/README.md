@@ -2,7 +2,7 @@
 ## Informe sus hallazgos:
 Resuma sus observaciones sobre por qué el modelo está limitado a una precisión del 90%.
 
-Para describir posibles razones por las que es modelo está limitado en su precisión es necesario tener en cuenta su configuración, la cual iniciamos. La red convolucional cuenta con tres capas construidas de la siguiente manera:
+Para describir posibles razones por las que es modelo está limitado en su precisión es necesario tener en cuenta su configuración, la cual iniciamos. La red convolucional cuenta con las siguientes capas y esta construida de la siguiente manera:
 ```
 // First convolution layer
 model.add(tf.layers.conv2d({
@@ -12,16 +12,22 @@ model.add(tf.layers.conv2d({
   activation: 'tanh',
   padding: 'same'
 }));
+```
+```
 model.add(tf.layers.averagePooling2d({ poolSize: 2, strides: 2 }));
-
+```
+```
 // Second convolution layer
 model.add(tf.layers.conv2d({
   filters: 16,
   kernelSize: 5,
   activation: 'tanh'
 }));
+```
+```
 model.add(tf.layers.averagePooling2d({ poolSize: 2, strides: 2 }));
-
+```
+```
 // Flatten layer
 model.add(tf.layers.flatten());
 ```
