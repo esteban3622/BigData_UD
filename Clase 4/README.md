@@ -74,7 +74,7 @@ Mejora de la implementación actual que podría ayudar a lograr una mayor precis
 
 Para ayudar a mejorar la precisión del modelo se propone realizar las siguientes acciones, teniendo en cuenta las caracteristicas de la red:
 - De acuerdo con la estructura de la red, se propone la variación de las función de activación de las capas convolucionales, y capas densas.
-- De la misma forma es posible empezar a varias la compilación del modelo, como lo es el optimizador de sgd a adam, aunque se ayuda a una convergencia del resultado en menor epocas.
+- De la misma forma es posible empezar a varias la compilación del modelo, como lo es el optimizador de `sgd` a `adam`, aunque se ayuda a una convergencia del resultado en menor epocas.
 - Explorar la cantidad de filtros por cada capa convolucional.
 - Aumentar la cantidad de epocas para brindar mayor capacidad de extraer patrones de los datos.
 - Agregar capas 'dropout' entre las capas convolucionales y densas, puede llegar a permitir que el modelo no sobreaprenda y garatizar resultados diferentes.
